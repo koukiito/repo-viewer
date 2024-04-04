@@ -15,7 +15,8 @@ class App extends HookConsumerWidget {
       debugShowCheckedModeBanner: false,
       routerConfig: ref.watch(routerProvider),
       title: 'Repo Viewer',
-      theme: ThemeData(),
+      theme: ThemeData.light(useMaterial3: true),
+      darkTheme: ThemeData.dark(useMaterial3: true),
     );
   }
 }
