@@ -1,4 +1,6 @@
 {
   "@@locale": "ja",
-  "date": "日付"
+  "date": "日付",
+  "settings": "設定",
+  "show_license": "ライセンスを表示"
 }

@@ -13,6 +13,15 @@ class SearchRepositoriesView extends HookConsumerWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Search Repositories'),
+          //To setting
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.settings),
+              onPressed: () {
+                context.push('/settings');
+              },
+            )
+          ],
         ),
         body: SizedBox(
           width: double.infinity,
