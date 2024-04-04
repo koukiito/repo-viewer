@@ -22,6 +22,7 @@ class SearchRepositoriesViewModel extends _$SearchRepositoriesViewModel {
         repositories: [],
       )),
       searchController: SearchController(),
+      querySuggestions: [],
     );
   }
 
@@ -33,6 +34,7 @@ class SearchRepositoriesViewModel extends _$SearchRepositoriesViewModel {
         success: (GithubRepositoriesResult data) {
           state = state.copyWith(
             githubRepositoriesResult: AsyncData(data),
+            querySuggestions: [query, ...state.querySuggestions],
           );
         },
         failure: (e, stackTrace) {

@@ -10,5 +10,6 @@ class SearchRepositoriesViewState with _$SearchRepositoriesViewState {
   const factory SearchRepositoriesViewState({
     required AsyncValue<GithubRepositoriesResult> githubRepositoriesResult,
     required SearchController searchController,
+    required List<String> querySuggestions,
   }) = _SearchRepositoriesViewState;
 }

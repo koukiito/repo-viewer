@@ -37,6 +37,9 @@ class SearchRepositoriesView extends HookConsumerWidget {
                                     .notifier)
                                 .search();
                           },
+                          onTap: () {
+                            controller.openView();
+                          },
                           trailing: [
                             IconButton(
                               icon: const Icon(Icons.search),
@@ -54,8 +57,9 @@ class SearchRepositoriesView extends HookConsumerWidget {
                       },
                       suggestionsBuilder:
                           (BuildContext context, SearchController controller) {
-                        return List<ListTile>.generate(5, (int index) {
-                          final String item = 'item $index';
+                        return List<ListTile>.generate(
+                            state.querySuggestions.length, (int index) {
+                          final String item = state.querySuggestions[index];
                           return ListTile(
                             title: Text(item),
                             onTap: () {
