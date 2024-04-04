@@ -24,8 +24,8 @@ class GithubRepositoriesResultRepositoryImpl
     try {
       final result = await dataSource.getRepositories(query, page);
       return Result.success(result);
-    } on Exception catch (e) {
-      return Result.failure(e);
+    } on Exception catch (exception, stackTrace) {
+      return Result.failure(exception, stackTrace);
     }
   }
 }
