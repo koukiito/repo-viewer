@@ -107,3 +107,4 @@ lib/generated_plugin_registrant.dart
 # Generated Files
 *.freezed.dart
 *.g.dart
+*.mocks.dart
