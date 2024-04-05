@@ -84,7 +84,15 @@ class SearchRepositoriesView extends HookConsumerWidget {
                       child: CircularProgressIndicator(),
                     ),
                     error: (error, stackTrace) => Center(
-                      child: Text('Error: $error'),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.error,
+                          ),
+                          Text('Error: $error'),
+                        ],
+                      ),
                     ),
                     data: (data) {
                       return ListView.builder(
