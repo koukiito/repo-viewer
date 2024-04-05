@@ -32,29 +32,23 @@ MVVM + Repository
     ```
  
 ## ディレクトリ構造
+/app Flutterのルートディレクトリ
 
-├── android
-├── ios
-├── lib
-│   ├── data
-│   │   ├── model # Model
-│   │   ├── remote # Remote Data Source
-│   │   └── repository # Reposiroty
-│   ├── l10n # .arbファイル等
-│   └── ui
-│       ├── route # Route定義
-│       ├── search_repositories # 検索画面関係(View, ViewModel, State)
-│       ├── search_repository_detail # 詳細画面関係 (View)
-│       └── settings # 設定画面関連 (View)
-└── test
-    └── data
-        ├── model
-        ├── remote
-        └── repositories
+/app/lib/data/model/ # Model  
+/app/lib/data/remote/ # Remote Data Source  
+/app/lib/data/repository/ # Reposiroty  
+
+/app/lib/ui/route/ # Route定義  
+/app/lib/ui/search_repositories/ # 検索画面関係(View, ViewModel, State)  
+/app/lib/ui/search_repository_detail/ # 詳細画面関係 (View)  
+/app/lib/ui/settings/ # 設定画面関連 (View)  
+
+/app/lib/l10n/ # .arbファイル等  
 
 ## 環境
 
 - flutter 3.19.5
+- Android MinSDK Version = 21 (Due to flutter_localization)
 
 ## lint, analyze
 
