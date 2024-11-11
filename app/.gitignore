@@ -47,7 +47,6 @@ app.*.map.json
 
 ### Flutter ###
 # Flutter/Dart/Pub related
-.fvm/flutter_sdk
 .packages
 build/
 coverage/
@@ -108,3 +107,6 @@ lib/generated_plugin_registrant.dart
 *.freezed.dart
 *.g.dart
 *.mocks.dart
+
+# FVM Version Cache
+.fvm/
