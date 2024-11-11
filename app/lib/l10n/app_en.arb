@@ -1,5 +1,21 @@
 {
+  "app_title": "Repo Viewer",
+  "app_legalese": "Kouki Ito",
   "date": "Date",
   "settings": "Settings",
-  "show_license": "Show License"
+  "show_license": "Show License",
+  "page_not_found": "Page Not Found",
+  "error": "Error",
+  "search_repositories": "Search Repositories",
+  "search_repository_detail": "Search Repository Detail",
+  "repository_name_not_found": "No name",
+  "repository_language_not_found": "No language",
+  "repository_avatar_url_not_found": "No avatar",
+  "repository_stars": "Stars",
+  "repository_forks": "Forks",
+  "repository_watchers": "Watchers",
+  "repository_issues": "Issues"
 }
+
+
+
