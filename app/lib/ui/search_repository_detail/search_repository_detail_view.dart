@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../data/model/github_repository.dart';
 
@@ -9,17 +10,17 @@ class SearchRepositoryDetailView extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final repoName = repository.fullName ?? 'No name';
-    final language = repository.language ?? 'No language';
+    final repoName = repository.fullName ?? L10n.of(context)!.repository_name_not_found;
+    final language = repository.language ?? L10n.of(context)!.repository_language_not_found;
     final starCount = repository.stargazersCount ?? 0;
     final forkCount = repository.forksCount ?? 0;
     final issueCount = repository.openIssuesCount ?? 0;
     final watchersCount = repository.watchersCount ?? 0;
-    final ownerUrl = repository.owner?.avatarUrl ?? 'No url';
+    final ownerUrl = repository.owner?.avatarUrl ?? L10n.of(context)!.repository_avatar_url_not_found;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search Repository Detail'),
+        title: Text(L10n.of(context)!.search_repository_detail),
       ),
       body: SizedBox(
         width: double.infinity,
@@ -53,25 +54,25 @@ class SearchRepositoryDetailView extends HookConsumerWidget {
                     children: [
                       Column(
                         children: [
-                          const Text('Stars'),
+                          Text(L10n.of(context)!.repository_stars),
                           Text(starCount.toString()),
                         ],
                       ),
                       Column(
                         children: [
-                          const Text('Watchers'),
+                          Text(L10n.of(context)!.repository_watchers),
                           Text(watchersCount.toString()),
                         ],
                       ),
                       Column(
                         children: [
-                          const Text('Forks'),
+                          Text(L10n.of(context)!.repository_forks),
                           Text(forkCount.toString()),
                         ],
                       ),
                       Column(
                         children: [
-                          const Text('Issues'),
+                          Text(L10n.of(context)!.repository_issues),
                           Text(issueCount.toString()),
                         ],
                       ),

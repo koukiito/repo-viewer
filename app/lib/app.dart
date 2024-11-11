@@ -14,7 +14,7 @@ class App extends HookConsumerWidget {
       supportedLocales: L10n.supportedLocales,
       debugShowCheckedModeBanner: false,
       routerConfig: ref.watch(routerProvider),
-      title: 'Repo Viewer',
+      title: L10n.of(context)!.app_title,
       theme: ThemeData.light(useMaterial3: true),
       darkTheme: ThemeData.dark(useMaterial3: true),
     );

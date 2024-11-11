@@ -12,8 +12,8 @@ class SettingsView extends HookConsumerWidget {
       showLicensePage(
         context: context,
         applicationVersion: info.version,
-        applicationName: 'Repo Viewer',
-        applicationLegalese: 'Kouki Ito',
+        applicationName: L10n.of(context)!.app_title,
+        applicationLegalese: L10n.of(context)!.app_legalese,
       );
     }
   }

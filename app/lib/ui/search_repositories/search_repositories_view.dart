@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:repo_viewer/ui/search_repositories/search_repositories_view_model.dart';
 
 class SearchRepositoriesView extends HookConsumerWidget {
@@ -12,7 +13,7 @@ class SearchRepositoriesView extends HookConsumerWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Search Repositories'),
+          title: Text(L10n.of(context)!.search_repositories),
           //To setting
           actions: [
             IconButton(
@@ -90,7 +91,7 @@ class SearchRepositoriesView extends HookConsumerWidget {
                           const Icon(
                             Icons.error,
                           ),
-                          Text('Error: $error'),
+                          Text('${L10n.of(context)!.error}: $error'),
                         ],
                       ),
                     ),
