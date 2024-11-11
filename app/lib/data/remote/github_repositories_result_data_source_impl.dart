@@ -7,7 +7,8 @@ import '../model/github_repositories_result.dart';
 import 'github_repositories_result_data_source.dart';
 
 final githubRepositoriesResultDataSourceProvider =
-    Provider((ref) => GithubRepositoriesResultDataSourceImpl(ref));
+    Provider<GithubRepositoriesResultDataSource>(
+        (ref) => GithubRepositoriesResultDataSourceImpl(ref));
 
 final httpProvider = Provider((ref) => http.Client());
 
