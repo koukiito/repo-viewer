@@ -10,13 +10,16 @@ class SearchRepositoryDetailView extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final repoName = repository.fullName ?? L10n.of(context)!.repository_name_not_found;
-    final language = repository.language ?? L10n.of(context)!.repository_language_not_found;
+    final repoName =
+        repository.fullName ?? L10n.of(context)!.repository_name_not_found;
+    final language =
+        repository.language ?? L10n.of(context)!.repository_language_not_found;
     final starCount = repository.stargazersCount ?? 0;
     final forkCount = repository.forksCount ?? 0;
     final issueCount = repository.openIssuesCount ?? 0;
     final watchersCount = repository.watchersCount ?? 0;
-    final ownerUrl = repository.owner?.avatarUrl ?? L10n.of(context)!.repository_avatar_url_not_found;
+    final ownerUrl = repository.owner?.avatarUrl ??
+        L10n.of(context)!.repository_avatar_url_not_found;
 
     return Scaffold(
       appBar: AppBar(
