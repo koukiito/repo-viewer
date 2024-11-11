@@ -6,6 +6,7 @@ import 'package:repo_viewer/ui/settings/settings_view.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../search_repository_detail/search_repository_detail_view.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 part 'app_router.g.dart';
 
@@ -16,10 +17,10 @@ GoRouter router(RouterRef ref) {
       debugLogDiagnostics: true,
       routes: $appRoutes,
       errorPageBuilder: (context, state) {
-        return const MaterialPage(
+        return MaterialPage(
             child: Scaffold(
           body: Center(
-            child: Text('Page not found'),
+            child: Text(L10n.of(context)!.page_not_found),
           ),
         ));
       });
