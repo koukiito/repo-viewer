@@ -7,7 +7,7 @@ MVVM + Repository
 ## 実行方法
 
 1. パッケージの取得
-    以下を実行してパッケージを取得します。
+    以下を実行してパッケージを取得します. 適宜fvmを使用してください.
 
     ```sh
     flutter pub get
@@ -30,8 +30,9 @@ MVVM + Repository
     ```sh
     flutter run
     ```
- 
+
 ## ディレクトリ構造
+
 /app Flutterのルートディレクトリ
 
 /app/lib/data/model/ # Model  
@@ -47,7 +48,7 @@ MVVM + Repository
 
 ## 環境
 
-- flutter 3.19.5
+- flutter 3.24.4 (fvmで指定)
 - Android MinSDK Version = 21 (Due to flutter_localization)
 
 ## lint, analyze
@@ -55,6 +56,7 @@ MVVM + Repository
 ```sh
 dart format --set-exit-if-changed $(find ./lib ./test -name "*.dart" -not \( -name "*.*freezed.dart" -o -name "*.*g.dart" \) )
 ```
+
 ([参考](https://starhoshi.hatenablog.com/entry/2023/05/19/172447))
 
 ```sh
@@ -71,4 +73,4 @@ dart analyze
 
 ## AI利用等
 
-GitHub Copilotを使用しています。
+GitHub Copilotを使用しています.
