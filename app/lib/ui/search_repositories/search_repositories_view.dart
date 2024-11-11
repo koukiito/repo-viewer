@@ -37,7 +37,7 @@ class SearchRepositoriesView extends HookConsumerWidget {
                           (BuildContext context, SearchController controller) {
                         return SearchBar(
                           controller: controller,
-                          padding: const MaterialStatePropertyAll<EdgeInsets>(
+                          padding: const WidgetStatePropertyAll<EdgeInsets>(
                               EdgeInsets.symmetric(horizontal: 16.0)),
                           onSubmitted: (_) {
                             debugPrint('Submitted');
