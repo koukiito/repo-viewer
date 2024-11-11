@@ -1,6 +1,19 @@
 {
   "@@locale": "ja",
+  "app_title": "Repo Viewer",
+  "app_legalese": "Kouki Ito",
   "date": "日付",
   "settings": "設定",
-  "show_license": "ライセンスを表示"
+  "show_license": "ライセンスを表示",
+  "page_not_found": "ページが見つかりません",
+  "error": "エラー",
+  "search_repositories": "リポジトリを検索",
+  "search_repository_detail": "リポジトリの詳細を検索",
+  "repository_name_not_found": "名前なし",
+  "repository_language_not_found": "言語なし",
+  "repository_avatar_url_not_found": "アバターなし",
+  "repository_stars": "Stars",
+  "repository_forks": "Forks",
+  "repository_watchers": "Watchers",
+  "repository_issues": "Issues"
 }
